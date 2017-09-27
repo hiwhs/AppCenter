@@ -4,7 +4,7 @@ using DevExpress.LookAndFeel;
 using DevExpress.Skins;
 using DevExpress.UserSkins;
 
-namespace SmartSolution.ShareCenter.UI
+namespace HiWhs.AppCenter.UI
 {
     static class Program
     {

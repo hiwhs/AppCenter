@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Windows.Forms;
 using SmartSolution.Utilities.Win;
 
-namespace SmartSolution.ShareCenter.UI
+namespace HiWhs.AppCenter.UI
 {
     public partial class AppCenterForm : DevExpress.XtraEditors.XtraForm
     {

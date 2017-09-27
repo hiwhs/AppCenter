@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 
-namespace ShareCenter.SSO.Models
+namespace Hiwhs.AppCenter.SSO.Models
 {
     public class IndexViewModel
     {

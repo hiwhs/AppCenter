@@ -8,8 +8,8 @@
     <ProjectGuid>{DAB1014C-5CC3-4BFB-AEF5-055986EBD39D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SmartSolution.ShareCenter.UI</RootNamespace>
-    <AssemblyName>ShareCenter</AssemblyName>
+    <RootNamespace>HiWhs.AppCenter.UI</RootNamespace>
+    <AssemblyName>AppCenter</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>

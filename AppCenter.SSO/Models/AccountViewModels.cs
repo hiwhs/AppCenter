@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace ShareCenter.SSO.Models
+namespace Hiwhs.AppCenter.SSO.Models
 {
     public class ExternalLoginConfirmationViewModel
     {

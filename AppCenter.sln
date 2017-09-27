@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShareCenter.UI", "AppCenter\ShareCenter.UI.csproj", "{DAB1014C-5CC3-4BFB-AEF5-055986EBD39D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppCenter.UI", "AppCenter\AppCenter.UI.csproj", "{DAB1014C-5CC3-4BFB-AEF5-055986EBD39D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShareCenter.SSO", "AppCenter.SSO\ShareCenter.SSO.csproj", "{41DE6A9B-0767-42D3-AE15-9A3DD57161E9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppCenter.SSO", "AppCenter.SSO\AppCenter.SSO.csproj", "{41DE6A9B-0767-42D3-AE15-9A3DD57161E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,17 +24,5 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 3
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = http://192.168.1.11:8080/tfs/smartsolution
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = AppCenter\\ShareCenter.UI.csproj
-		SccProjectName1 = ShareCenter
-		SccLocalPath1 = ShareCenter
-		SccProjectUniqueName2 = AppCenter.SSO\\ShareCenter.SSO.csproj
-		SccProjectName2 = ShareCenter.SSO
-		SccLocalPath2 = ShareCenter.SSO
 	EndGlobalSection
 EndGlobal

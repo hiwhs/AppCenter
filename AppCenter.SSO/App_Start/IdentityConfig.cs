@@ -1,18 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using System.Web;
+using Hiwhs.AppCenter.SSO.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
-using ShareCenter.SSO.Models;
 
-namespace ShareCenter.SSO
+namespace Hiwhs.AppCenter.SSO
 {
     public class EmailService : IIdentityMessageService
     {

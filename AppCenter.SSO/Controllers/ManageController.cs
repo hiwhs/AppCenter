@@ -1,14 +1,13 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using Hiwhs.AppCenter.SSO.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using ShareCenter.SSO.Models;
 
-namespace ShareCenter.SSO.Controllers
+namespace Hiwhs.AppCenter.SSO.Controllers
 {
     [Authorize]
     public class ManageController : Controller

@@ -1,4 +1,4 @@
-﻿namespace SmartSolution.ShareCenter.UI
+﻿namespace HiWhs.AppCenter.UI
 {
     partial class AppCenterForm
     {

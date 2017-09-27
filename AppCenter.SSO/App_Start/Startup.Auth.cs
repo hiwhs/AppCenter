@@ -1,12 +1,12 @@
 ﻿using System;
+using Hiwhs.AppCenter.SSO.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Owin;
-using ShareCenter.SSO.Models;
 
-namespace ShareCenter.SSO
+namespace Hiwhs.AppCenter.SSO
 {
     public partial class Startup
     {

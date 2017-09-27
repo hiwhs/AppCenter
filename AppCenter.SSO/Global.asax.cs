@@ -4,7 +4,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 
-namespace ShareCenter.SSO
+namespace Hiwhs.AppCenter.SSO
 {
     public class MvcApplication : HttpApplication
     {

@@ -1,8 +1,9 @@
-﻿using Microsoft.Owin;
+﻿using Hiwhs.AppCenter.SSO;
+using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartup(typeof(ShareCenter.SSO.Startup))]
-namespace ShareCenter.SSO
+[assembly: OwinStartup(typeof(Startup))]
+namespace Hiwhs.AppCenter.SSO
 {
     public partial class Startup
     {
