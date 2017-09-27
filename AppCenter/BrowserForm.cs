@@ -12,35 +12,42 @@ namespace HiWhs.AppCenter.UI
 {
     public partial class BrowserForm : Form
     {
-        private readonly ChromiumWebBrowser browser;
+        private ChromiumWebBrowser _browser;
 
         public BrowserForm()
         {
             InitializeComponent();
+            InitBrowser();
+        }
 
-            Text = "CefSharp";
-            WindowState = FormWindowState.Maximized;
-
-            browser = new ChromiumWebBrowser("www.deberp.com")
+        private void InitBrowser()
+        {
+            _browser = new ChromiumWebBrowser("www.deberp.com")
             {
                 Dock = DockStyle.Fill,
             };
-            toolStripContainer.ContentPanel.Controls.Add(browser);
+            toolStripContainer.ContentPanel.Controls.Add(_browser);
 
-            browser.LoadingStateChanged += OnLoadingStateChanged;
-            browser.ConsoleMessage += OnBrowserConsoleMessage;
-            browser.StatusMessage += OnBrowserStatusMessage;
-            browser.TitleChanged += OnBrowserTitleChanged;
-            browser.AddressChanged += OnBrowserAddressChanged;
+            _browser.LoadingStateChanged += OnLoadingStateChanged;
+            _browser.ConsoleMessage += OnBrowserConsoleMessage;
+            _browser.StatusMessage += OnBrowserStatusMessage;
+            _browser.TitleChanged += OnBrowserTitleChanged;
+            _browser.AddressChanged += OnBrowserAddressChanged;
+        }
 
+
+        private void BrowserForm_Load(object sender, EventArgs e)
+        {
+            Text = @"CefSharp浏览器测试";
             var bitness = Environment.Is64BitProcess ? "x64" : "x86";
-            var version = String.Format("Chromium: {0}, CEF: {1}, CefSharp: {2}, Environment: {3}", Cef.ChromiumVersion, Cef.CefVersion, Cef.CefSharpVersion, bitness);
+            var version =
+                $"Chromium: {Cef.ChromiumVersion}, CEF: {Cef.CefVersion}, CefSharp: {Cef.CefSharpVersion}, Environment: {bitness}";
             DisplayOutput(version);
         }
 
         private void OnBrowserConsoleMessage(object sender, ConsoleMessageEventArgs args)
         {
-            DisplayOutput(string.Format("Line: {0}, Source: {1}, Message: {2}", args.Line, args.Source, args.Message));
+            DisplayOutput($"Line: {args.Line}, Source: {args.Source}, Message: {args.Message}");
         }
 
         private void OnBrowserStatusMessage(object sender, StatusMessageEventArgs args)
@@ -79,8 +86,8 @@ namespace HiWhs.AppCenter.UI
         private void SetIsLoading(bool isLoading)
         {
             goButton.Text = isLoading ?
-                "Stop" :
-                "Go";
+                "停止" :
+                "转到";
             goButton.Image = isLoading ?
                 Properties.Resources.nav_plain_red :
                 Properties.Resources.nav_plain_green;
@@ -113,7 +120,7 @@ namespace HiWhs.AppCenter.UI
 
         private void ExitMenuItemClick(object sender, EventArgs e)
         {
-            browser.Dispose();
+            _browser.Dispose();
             Cef.Shutdown();
             Close();
         }
@@ -125,21 +132,17 @@ namespace HiWhs.AppCenter.UI
 
         private void BackButtonClick(object sender, EventArgs e)
         {
-            browser.Back();
+            _browser.Back();
         }
 
         private void ForwardButtonClick(object sender, EventArgs e)
         {
-            browser.Forward();
+            _browser.Forward();
         }
 
         private void UrlTextBoxKeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode != Keys.Enter)
-            {
-                return;
-            }
-
+            if (e.KeyCode != Keys.Enter) return;
             LoadUrl(urlTextBox.Text);
         }
 
@@ -147,7 +150,7 @@ namespace HiWhs.AppCenter.UI
         {
             if (Uri.IsWellFormedUriString(url, UriKind.RelativeOrAbsolute))
             {
-                browser.Load(url);
+                _browser.Load(url);
             }
         }
     }

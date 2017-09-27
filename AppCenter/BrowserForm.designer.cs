@@ -80,11 +80,13 @@
             // outputLabel
             // 
             this.outputLabel.AutoSize = true;
+            this.outputLabel.BackColor = System.Drawing.Color.Transparent;
             this.outputLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.outputLabel.Location = new System.Drawing.Point(0, 390);
             this.outputLabel.Name = "outputLabel";
             this.outputLabel.Size = new System.Drawing.Size(0, 12);
             this.outputLabel.TabIndex = 0;
+            this.outputLabel.Visible = false;
             // 
             // toolStrip1
             // 
@@ -175,6 +177,8 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "BrowserForm";
             this.Text = "BrowserForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.BrowserForm_Load);
             this.toolStripContainer.ContentPanel.ResumeLayout(false);
             this.toolStripContainer.ContentPanel.PerformLayout();
             this.toolStripContainer.TopToolStripPanel.ResumeLayout(false);
