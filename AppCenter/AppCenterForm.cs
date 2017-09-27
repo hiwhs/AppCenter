@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Windows.Forms;
-using SmartSolution.Utilities.Win;
 
 namespace HiWhs.AppCenter.UI
 {
@@ -35,14 +34,14 @@ namespace HiWhs.AppCenter.UI
                 //Logger.Write("程序关闭，关闭原因" + e.CloseReason);
                 //CommandStopSystem();
                 e.Cancel = false;
-                UtilityHelper.InvokeExecute(this, Close);
+                //UtilityHelper.InvokeExecute(this, Close);
             }
             else
             {
                 e.Cancel = true;// !AppContext.Instance.UserExist;
                 if (e.Cancel)
                 {
-                    UtilityHelper.InvokeExecute(this, Hide);
+                    //UtilityHelper.InvokeExecute(this, Hide);
                 }
             }
         }

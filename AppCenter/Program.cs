@@ -20,7 +20,7 @@ namespace HiWhs.AppCenter.UI
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
             UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
-            Application.Run(new AppCenterForm());
+            Application.Run(new BrowserForm());
         }
     }
 }
